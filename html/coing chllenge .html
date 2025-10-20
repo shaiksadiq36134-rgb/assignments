@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding challenge</title>
+    <style>
+        /*positions*/
+        td {
+  white-space: normal;   
+  word-wrap: break-word; 
+  max-width: 90px;     
+}
+/*z index*/
+.box1{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-color: rgb(200, 200, 217);
+    z-index: 1;
+    padding: 70px;
+    text-align: right;
+}
+.box2{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-color: antiquewhite;
+    z-index: 2;
+    text-align: center;
+    padding: 50px;
+}
+/*transition*/
+.baby{
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    padding: 30px;
+    width: 200px;
+    background-color: aqua;
+
+}
+.baby:hover{
+    transition-property: width;
+    width: 800px;
+    transition-duration: 12s;
+    transition-delay: 1s;
+    transition-timing-function: ease;
+    background-color: brown;
+    color: white;
+}
+/*animation*/
+.backs{
+    width:300px;
+    padding: 40px;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid red;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes move{
+    0%{
+        transform: translate(0);
+
+    }
+    50%{
+        transform: translate(500px);
+    }
+    100%{
+        transform: translate(0);
+    }
+    
+}
+/*rotate*/
+.card10{
+    
+            border: 1px solid red;
+            width: 290px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+            transform: rotate(25deg);
+
+}
+/*scale*/
+
+.card11{
+    
+            border: 1px solid red;
+            width: 290px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+          
+}
+.card11:hover{
+      transform:scale(1.4);
+}
+/*translate*/
+
+.card13{
+    
+            border: 1px solid red;
+            width: 290px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+        
+}
+.card13:hover{
+    transform: translate(90px);
+}
+/*----keyframes*/
+@keyframes moveBox {
+  0%   { transform: translateX(0); }     
+  50%  { transform: translateX(100px); } 
+  100% { transform: translateX(0); }     
+}
+
+.nava {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: moveBox 3s infinite;  
+}
+        .scene{
+            width: 200px;
+            height: 300px;
+        }
+        .cube{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 6s linear infinite;
+
+        }
+        .cube div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid aquamarine;
+            background-color: rgb(172, 244, 218);
+            color: white;
+            font-size: 24px;
+        }
+        .front{transform: rotateY(0deg)translateZ(100px);}
+        .back{transform: rotateY(180deg) translateZ(100px);}
+        .left{transform: rotateY(90deg) translateZ(100px);}
+        .right{transform: rotateY(-90deg) translateZ(100px);}
+        .top{transform: rotateX(90deg) translateZ(100px);}
+        .bottom{transform: rotateX(-90deg)translateZ(100px);}
+
+        @keyframes spin{
+            from{transform: rotateX(0deg) rotateY(odeg);}
+            to{ transform: rotateX(360deg) rotateY(260deg)}
+        }
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Product Info */
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-info h3 {
+  margin-bottom: 10px;
+  color: #0ea5e9;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Price & Button */
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  padding: 10px 25px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--positons-->
+    <h1 style="text-align: center;">difference between positions:</h1>
+    <table border="1" style="color: rgb(34, 21, 5); width: 100%;">
+        <thead>
+            <tr>
+                <th>sourse</th>
+            <th>Realative</th>
+            <th>Absolute</th>
+            <th>fixed</th>
+            <th>sticky</th>
+            <th>static</th>
+            </tr>
+        </thead>
+        <tr style="color: black;">
+            <td>meaning</td>
+            <td >The element stays in the normal flow, but you can move it slightly using top, 
+                left, etc.The space it originally occupied remains reserved.</td>
+                <td>The element is removed from the normal flow (it doesn’t affect others).
+
+It is positioned relative to the nearest ancestor that has position: relative/absolute/fixed/sticky.</td>
+<td>Removed from flow. Stays fixed relative to the viewport. Does not move on scroll.</td>
+<td>Behaves like relative until a scroll point is reached, then sticks like fixed.</td>
+<td>Default for all elements. Positioned according to normal document flow. Offsets (top, left, etc.) don’t work.</td>
+        </tr>
+        <tr>
+            <td>moves on scroll</td>
+            <td>yes it moves when we scroll</td>
+            <td>yes it moves when we scroll</td>Inline elements do not start on a new line.
+            
+            They only take up as much width as their content.
+            
+            You
+            <td>no it does'nt moves when we scroll</td>
+            <td>it will move to specific position till it act as normal if it is reached its stage then it cant move </td>
+            <td>yes it moves when we scroll</td>
+
+        </tr>
+        <tr>
+            <td>Based on</td>
+            <td>it is based on its own position</td>
+            <td>it is based on nearest positioned ancestor or html tag</td>
+            <td>it is based on browser window view port</td>
+            <td>it is based on scroll position nearest ancestor</td>
+            <td>it is based on the normal flow</td>
+
+        </tr>
+        
+    </table>
+    <!--display properties-->
+    <h1 style="text-align: center;">display properties</h1>
+    <table border="1" style="width: 80%;">
+        <thead>
+            <tr>
+                <th>value</th>
+                <th>meaning</th>
+                <th>example</th>
+
+            
+            </tr>
+        </thead>
+        <tr>
+            <td>inline</td>
+            <td>Does not start on a new line. Takes only as much space as needed. Width/height can’t be set.</td>
+            <td>span tag, anchor tag , bold tag</td>
+        </tr>
+        <tr>
+            <td>inline block</td>
+           <td>Behaves like inline (same line), but allows setting width/height like block.</td>
+           <td>img tag ,use full to nav and buttons </td>
+        </tr>
+<tr>
+    <td>block</td>
+    <td>Starts on a new line, takes up full width by default. You can set width/height.</td>
+    <td>div tag and paragraph tag, heading tag are the examples </td>
+</tr>
+<tr>
+    <td>flex</td>
+    <td>Makes the element a flex container. Its children can be aligned in rows/columns with flexible spacing.</td>
+    <td>used for nav bars and layouts</td>
+</tr>
+    </table>
+    <!--z-index-->
+    <h1>z-index </h1>
+    <p><b>meaning:</b>The`z-index in CSS decides which element appears on top when elements overlap.
+A higher value means front, and a lower value stays behind.
+It only works on elements with `position: relative, absolute, fixed, or sticky`.
+</p>
+
+<div class="box1">background</div>
+<div class="box2">front</div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--transition and animation-->
+<h1>transition</h1>
+<div class="baby">box</div>
+<h1>animation</h1>
+<div class="backs">body</div>
+<!--transformation...scale,rotate,translate-->
+<h1>transform</h1>
+<p><b>meaning:</b>The transform property in CSS is used to visually change (transform) an element’s shape, size, and position without disturbing other elements in the flow.
+It allows you to move, rotate, scale, or skew elements.</p>
+<h1>rotate()</h1>
+<div class="card10">
+                <p><b>PANEER TIKKA</b></p>
+               <img src="../media/image/paneer tikka.jpg" alt="paneer tikka">
+               <p>Paneer tikka</p>
+               <p class="price"><b>price:</b>299/-</p>
+               <p><b>review</b>“Soft, juicy paneer with a perfect smoky flavor. The spices are well balanced, not too heavy,
+                 and it tastes just like authentic tandoori. Must try for every vegetarian!”</p>
+                 <p>⭐⭐🌟⭐☆</p>
+                <p>=(4.5)</p>
+               </div>
+               <h1>scale()</h1>
+               <div class="card11">
+                <p><b>PANEER TIKKA</b></p>
+               <img src="../media/image/paneer tikka.jpg" alt="paneer tikka">
+               <p>Paneer tikka</p>
+               <p class="price"><b>price:</b>299/-</p>
+               <p><b>review</b>“Soft, juicy paneer with a perfect smoky flavor. The spices are well balanced, not too heavy,
+                 and it tastes just like authentic tandoori. Must try for every vegetarian!”</p>
+                 <p>⭐⭐🌟⭐☆</p>
+                <p>=(4.5)</p>
+               </div>
+               <h1>translate()</h1>
+                 <div class="card13">
+                <p><b>PANEER TIKKA</b></p>
+               <img src="../media/image/paneer tikka.jpg" alt="paneer tikka">
+               <p>Paneer tikka</p>
+               <p class="price"><b>price:</b>299/-</p>
+               <p><b>review</b>“Soft, juicy paneer with a perfect smoky flavor. The spices are well balanced, not too heavy,
+                 and it tastes just like authentic tandoori. Must try for every vegetarian!”</p>
+                 <p>⭐⭐🌟⭐☆</p>
+                <p>=(4.5)</p>
+               </div>
+               <!--key frames-->
+               <h1>keyframes</h1>
+               <p>You define key points (like 0%, 50%, 100%).
+
+CSS smoothly transitions the element between these points.
+
+The browser animates the changes over the duration you set.</p>
+<div class="nava">box</div>
+<!---cube rotating-->
+<h1>ROTATING CUBE</h1>
+ <div class="scene">
+        <div class="cube">
+            <div class="front">front</div>
+            <div class="back">back</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+            <div class="bottom">bottom</div>
+            <div class="top">top</div>
+        </div>
+    </div>
+    <!--product card-->
+    <h1>product card</h1>
+    <div class="product-card">
+  <img src="../media/image/blutooth.jpeg" alt="Product">
+  <div class="product-info">
+    <h3>Boat wireless Bluetooth headphones. 🎧</h3>
+    <p>"Experience rich, immersive sound with our sleek wireless Bluetooth headphones."
+</p>
+    <div class="price">$49.99</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+</div>
+
+
+
+            </body>
+</html>

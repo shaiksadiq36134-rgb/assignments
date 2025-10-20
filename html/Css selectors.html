@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selcctors</title>
+    <style>
+    /*============ TYPE SELECTOR ============
+    Definition: Type selector selects element by its tag name (like h1, p, div).
+    Use: Apply style to all tags of that type.
+    Syntax: element { property: value; }
+    */
+
+        h1{
+            background-color: aquamarine;
+            color: red;
+            text-align: center;
+        }
+         /* 
+    ============ UNIVERSAL SELECTOR ============
+    Definition: Universal selector (*) applies style to ALL elements in the page.
+    Use: Reset margins, paddings or apply a common style to every element.
+    Syntax: * { property: value; }
+    Priority: Lowest priority.
+    */
+    *{
+       font-family: Arial;
+       font-size: 20px;
+   
+       
+    }
+    /*------class selector-----
+    defnition: In CSS, a class selector is used to style elements that have a specific class attribute.
+It is written with a dot (.) before the class name.
+
+Syntax:
+.classname {
+  property: value;
+}*/
+.highlight {
+    color: chartreuse;
+}
+/*-----ID selcotors-----------
+Defnition: In CSS, an ID selector is used to style a single, unique element on a page.
+It is written with a hash (#) before the ID name.
+
+✅ Syntax:
+#idname {
+  property: value;
+}*/
+#unique{
+     background-color: cornflowerblue;
+padding: 20px;
+
+}
+/*-----group selector----
+defnition: in CSS, a group selector is used when you want to apply the same style to multiple selectors at once.
+Instead of repeating code, you can group them with a comma ( , ).
+
+✅ Syntax:
+selector1, selector2, selector3 {
+  property: value;
+}*/
+p,h2{
+    color: black;
+    font-style: italic;
+}
+/*---- descendant selector---
+Defniton: In CSS, a descendant selector is used to select elements that are inside (nested within) another element.
+It is written as:
+
+parent child {
+  property: value;
+}*/
+div p{
+    color: red;
+}/*----------Child selectors------
+Defntion: In CSS, a child selector is used to style elements that are direct children of a parent element.
+It is written with a greater-than sign ( > ) between the parent and child.
+
+✅ Syntax:
+parent > child {
+  property: value;
+}*/
+div > span{
+    color: purple;
+}
+/*---adjacent sibling selector----
+defnition: In CSS, the Adjacent Sibling Selector (+) is used to select an element that comes immediately after another element (they must share the same parent).
+
+✅ Syntax:
+element1 + element2 {
+  property: value;
+}*/
+h2+p{
+    color: orange;
+}
+/*----general sibling selector----
+defnition: In CSS, the General Sibling Selector (~) is used to select all siblings of an element that come after it (not just the immediate one).
+They must share the same parent, but don’t need to be directly next to each other.
+
+✅ Syntax:
+element1 ~ element2 {
+  property: value;
+}*/
+h4~p{
+    color: brown;
+    padding-top: 5px;
+}
+/*---- Attribute Selector ------
+defnition:An attribute selector is used to style elements based on the presence or value of their HTML attributes.
+syntax:element[attribute=value] { property: value;}*/
+ input[type="text"] {
+     border: 2px solid red;
+    }
+    a[target=_blank]{
+      color: blue;
+    }
+    
+    /*
+    ============ PSEUDO-CLASS SELECTOR ============
+    Definition: Pseudo-class (:) defines special state of an element.
+    Use: Hover, focus, visited etc.
+    Syntax: element:pseudo-class { property: value; }
+    */
+    a:hover{
+      color: red;
+      text-decoration:underline ;
+      
+    }
+    input:focus{ 
+      border: 2px solid green;
+
+    }
+     /*
+    ============ PSEUDO-ELEMENT SELECTOR ============
+    Definition: Pseudo-elements (::) style specific part of element.
+    Use: First letter, before, after content etc.
+    Syntax: element::pseudo-element { property: value; }
+*/
+   
+    p::first-letter{
+      font-size: 30px;
+      color: red;
+
+    }
+    p::after{
+      content: "😍❤";
+    }
+    /*----Box model----
+    defnition: The CSS Box Model is the way browsers interpret the size and spacing of every element on a webpage.
+Every element is treated like a rectangular box, and it is made up of 4 main parts:
+
+Content – The actual text, image, or data inside the box.
+
+Padding – The space between the content and the border (inside the box).
+
+Border – A line that wraps around the content + padding.
+
+Margin – The space outside the border, separating the element from others.
+
+📌 Structure looks like this:
+ ---------------------
+|       Margin        |
+|  -----------------  |
+|  |     Border    |  |
+|  |  -----------  |  |
+|  |  | Padding |  |  |
+|  |  | Content |  |  |
+|  |  -----------  |  |
+|  -----------------  |
+ ---------------------*/
+
+.box {
+  width: 200px;               
+    padding: 20px;               
+    border: 5px solid black;    
+  margin: 15px;                
+  background-color: lightblue; 
+}
+
+
+
+
+
+
+
+    </style>
+
+    </head>
+<body>
+
+    <!----type selctor--->
+    <h1>introduction about css selectors</h1>
+    <!---class selectors-->
+    <p class="highlight">This is the class selector where the css style is applied by using of class</p>
+    <!----ID selector -->
+    <p id="unique">This is ID selector which is used to select a unique element by using unique id</p>
+    <!---group selctors-->
+    <p>this is group selector which will come back ground color light yellow</p>
+    <h2>This 2nd tag in group tag which came in same color</h2>
+<!-- descendant selector-->
+ <div>
+    <p>This is descendant selector so it is red</p>
+ </div>
+ <!---Child Selectors-->
+ <div>
+    <span>this is the child paragraph</span>
+
+ </div>
+ <!---adjacent sibling selector-->
+ <h2>this is h2</h2>
+ <p>this is para graph so it orange</p>
+ <!---General sibling selctors-->
+ <h4>this is h4</h4>
+<p>this is child sibling to h4 so it is brown </p>
+<p>This is another sibling after h4 so also Brown. </p>
+<!---attribute selectors-->
+<input type="text" name="enter your name;" placeholder="enter your name ">
+<br><br>
+<a href="https://ibommatamil.com/" target="_blank">click here to open in another page</a>
+<!---pseudo class  example-->
+<p>hover on this <a href="#">"link ></a> to see hover effect</p>
+<input type="text" placeholder="enter here to see green">
+<!---pseudo element example  -->
+<p>in this para the first letter color will be red </p>
+<!----box model example----->
+<div class="box">This is Content</div>
+
+
+</body>
+</html>

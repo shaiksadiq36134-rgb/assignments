@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page by using html and css</title>
+    <style>
+        header{
+            background-color:rgb(66, 57, 57) ;
+            padding: 10px;
+            color: white;
+        }
+        nav{
+          padding-bottom: auto;
+            text-align: right;
+            justify-content: baseline;
+        }
+        nav a{
+        
+            color: white;
+            text-decoration: none;
+            margin: 50px;
+            font-weight: bold;
+            font-size: 20px;
+           
+        }
+        a:hover{
+            color: red;
+        }
+        .hero{
+            background: url(https://picsum.photos/1920/1080?blur=2)no-repeat center center;
+  background-size: cover;  
+  height: 60vh;           
+  width: 100%;            
+    text-align: center;
+      padding: 80px 20px;
+  color: white;            
+  font-size: 40px;
+}
+.hero h1{
+ margin-bottom: 50px;
+ font-size: 50px;
+ color: rgb(225, 222, 227);
+}
+.hero p{
+    font-size: 60px;
+    margin: auto;
+}
+.hero button{
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 30px;
+    background-color: aqua;
+    color: rgb(69, 62, 62);
+    font-size: x-large;
+    cursor: pointer;
+}
+    
+.hero button:hover{
+    transform: scale(1.5);
+    color: darkblue;
+    background-color: bisque;
+}
+.feature{
+  
+     background: rgb(244, 14, 205);
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      color: white;
+      font-size: x-large;
+  
+
+}
+.features{ 
+     display: flex;
+      justify-content: center;
+      gap: 90px;
+      padding: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column; 
+    align-items: center;    
+  }
+
+  .features .card {
+    width: 90%;  
+    max-width: 400px; 
+  }
+}
+.feature:hover{
+    transform: scale(1.5);
+}
+
+footer {
+  background: #3a2e2e;
+  color: white;
+  text-align: center;    
+  padding: 20px 0;
+  font-size: x-large;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  color: white;
+  margin: 0 15px;   
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer .social-links a:hover {
+  color: rgb(229, 6, 10); 
+}
+.about{
+  padding:20px;
+  background-color: rgb(196, 189, 189);
+  text-align: center;
+  justify-content: center;
+}
+.about img{
+  max-width: 500px;
+  height: auto;
+  border-radius: 25px;
+}
+.service{
+  text-align: center;
+  font-family: serif;
+  justify-content: center;
+  background-color: aliceblue;
+ padding: 20px;
+ font-size: x-large;
+
+}
+.service ul{
+  list-style-position: inside;
+  margin: 0;
+}
+.review{
+  background-color: antiquewhite;
+         border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      color: rgb(35, 1, 1);
+      font-size: x-large;
+      border: 1px solid red;
+      border-radius: 20px;
+      
+      
+   
+  
+}
+
+.cards{
+  display: flex;
+  border-top: 1px solid black;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+.review:hover{
+  transform: scale(1.5);
+}
+.plans{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+gap: 200px;
+
+
+}
+.corn{
+    background-color: rgb(251, 253, 253);
+         border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      color: rgb(35, 1, 1);
+      font-size: x-large;
+      border: 1px solid red;
+      border-radius: 20px;
+      justify-content: center;
+      
+
+
+
+}
+.mava{
+  text-align: center;
+  border: 1px solid red; 
+  border-radius: 100px;
+   background-color: #3a2e2e;
+   color: white;
+}
+h1{
+   
+   animation-name: movetext;
+   animation-duration: 12s;
+   animation-timing-function: ease-in-out;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-fill-mode: forwards;
+}
+@keyframes movetext{
+  0%{
+    transform: translate(0);
+  }
+  50%{
+    transform: translate(100px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+.corn button{
+  color: white;
+  border: 1px solid orangered;
+  background-color: orangered;
+  cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+justify-content: center;
+
+}
+.corn:hover{
+  transform: scale(1.5);
+}
+.haha{
+  font-size: large;
+  font-weight: 100;
+}
+
+.contact-form form {
+  display: inline-block; 
+  text-align: left;      
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 300px;       
+  padding: 10px;
+  margin: 10px auto;  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+
+  display: block;        
+  margin: 20px auto;     
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: darkorange;
+}
+footer a{
+  color: white;
+}
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>MY PRODUCTS</h2>
+        <div class="couse">
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#">FEATURE</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SERVICE</a>
+                <a href="#">PRICING</a>
+                <a href="#">FAQ</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Our Service</h1>
+    <p>Build, grow and scale your business with us. Fast, secure and reliable solutions.</p>
+    <button>Get Started</button>
+  </section>
+  <section class="features">
+    <div class="feature">
+         <h3>⚡ Fast</h3>
+      <p>Lightning-fast performance to keep your users happy.</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 Secure</h3>
+      <p>Advanced security to protect your data and customers.</p>
+    </div>
+    <div class="feature">
+      <h3>📈 Scalable</h3>
+      <p>Our tools grow as your business expands.</p>
+
+    </div>
+
+  </section>
+  <!---ABOUT PAGE-->
+  <div class="about">
+    <h3>ABOUT US</h3>
+    <P>We provide innovative solutions that help businesses succeed in the digital era.
+       Our team has years of experience in technology, strategy, and customer growth.</P>
+       <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="Team">
+
+
+  </div>
+  <div class="service">
+    <ul>
+    
+        <h1>Our Services</h1>
+<li>🌐 Web Development</li>
+<li>📱Mobile App Development</li>
+<li>☁ Cloud Solutions</li>
+<li>📊 Data Analytics</li>
+<li>💡 Digital Marketing</li>
+    </ul>
+  </div>
+  <h1 class="mava">"what our customer is saying"</h1>
+  <!---review-->
+  <div class="cards">
+    <div class="review">
+      <img src="../media/image/man 1.jpeg" alt="man">
+      <P><b>NAME:</b>Anthony</P>
+      <p><b>Adress:</b>United states</p>
+
+      <p>⭐⭐⭐⭐⭐
+      <p> "Amazing service, boosted our sales by 200%!"
+      </p>
+        </p>
+</div>
+<div class="review">
+  <img src="../media/image/man 2.jpeg" alt="man">
+  <p><b>NAME:</b>priya</p>
+  <p><b>Adress:</b>Australia</p>
+  <p>⭐⭐⭐⭐</p>
+  <p> "Reliable and secure platform, highly recommend!"</p>
+</div>
+<div class="review">
+  <img src="../media/image/man 3.jpeg" alt="man">
+  <p><b>NAME:</b>elleis perry</p>
+  <p><b>ADRESS:</b>chicago</p>
+  <p>⭐⭐⭐⭐</p>
+  <p>"Great team, excellent support!"</p>
+</div>
+
+  <div class="review">
+    <img src="../media/image/kala suar.jpeg" alt="kala">
+    <p><b>NAME:</b>sunil tope</p>
+    <p><b>ADRESS:</b>west indies</p>
+    <p>⭐⭐⭐</p>
+    <p>"great work and good experience"</p>
+  </div>
+  </div>
+  <h3 style="text-align: center; font-size: x-large; border: 1px solid black;  border-radius: 60px;background-color: black;color: white;">PLANS</h3>
+  <section class="plans">
+    <div class="corn">
+      <h4>basic</h4>
+      <p>$19 per month</p>
+      <p>✔ Essential features</p>
+      <button>choose plan</button>
+        </div>
+        <div class="corn">
+          <h4>pro</h4>
+          <p>$49 per month</p>
+          <p>✔ All Basic + premium support</p>
+          <button>choose plan</button>
+              </div>
+              <div class="corn">
+                <h4>Enterprise</h4>
+                <p>$99 per month</p>
+                <p>✔ Everything you need</p>
+                <button>choose plan</button>
+              </div>
+  </section >
+<div class="haha">
+  <h1 style="text-align: center;">frequently asked questions </h1>
+  <h5 style="color: orange; ">1.How do I sign up?</h5>
+  <p>ans:You can sign up by clicking the "Get Started" button above.</p>
+<h5 style="color: orange;">2. Do you offer customer support?</h5>
+<p>
+ans: Yes! 24/7 customer support is available with Pro and Enterprise plans</p>
+<h5 style="color: orange;">3. Can I upgrade later?</h5>
+<p> ans:Absolutely, you can upgrade or downgrade at any time.</p>
+</div>
+<h3 style="text-align: center;">contact us </h3>
+<div class="contact-form">
+  <input type="text" name="your name" placeholder="enter your name"><br><br>
+  <input type="email" name="email" placeholder="enter your email"><br><br>
+  <input type="text" name="your messsege" placeholder="your messsege"><br><br>
+  <button>send your messsege</button>
+  <footer>
+    <p>contact us :@info mycompany.com</p>
+    <p>follow us on <a href="#">instagram</a>/ <a href="#">facebook</a>/ <a href="#">youtube</a></p>
+    <p>© 2025 MyCompany. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>

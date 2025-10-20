@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position in class</title>
+  <style>
+      body {
+  width: 100%;      
+  height: 2000px;  
+  background-color: whitesmoke; 
+  
+}
+
+    
+    *{
+      font-size: x-large;
+      
+    }
+.heaven{
+      position: relative ;
+      top: 30px;
+right: 40px;
+     background-color: lightgreen;
+    }
+    .place{
+      background-color: aliceblue;
+      color: brown;
+
+    }
+    .static{
+      position: static;
+      background-color: bisque;
+      color: blue;
+      
+    }
+    .absolute{
+      position: absolute;
+      background-color: pink;
+      top: 500px;
+      left: 50px;
+    }
+    .fixed{
+      position: fixed;
+      bottom: 0 ; right: 20px;
+      background-color: blanchedalmond;
+      padding: 30px;
+      border: 20px double burlywood;
+    }
+    .sticky{
+      position: sticky;
+      top: 100px;
+
+
+      background-color: aliceblue;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!--<h1>static position</h1>-->
+  <!--the static position is the default setting and and every element is positioned  in normal document--->
+
+  <div class="static">iam placing the element in the normal position</div>
+  <!---<h1 class="place">relative position</h1>-->
+<div class="heaven">
+  Iam moved 30px down and 40px right from my original spot.
+</div>
+<!--<h1>absolute postion</h1>--->
+<!--in absolute position the element is removed form it's normal flow means that the other element ignore the place of absoloute position 
+the elements are placed based on the positioned ancestors if there is no other ancestors then it use the document body as the base to place
+ the element-->
+<div   class="absolute">
+  I am absolute position
+</div>
+<!--fixed position-->
+<!--fixed position means the element is fixed to the screen if we scroll it down then also its fixed with the screen -->
+<div class="fixed">iam fixed here</div>
+<!--sticky position-->
+<!--Sticky position is defined as the when we scroll it down it behaves like a realative position when scrolling reaches to specific position 
+then it becomes fixed and its like sticky note-->
+<div class="sticky">iam sticky position </div>
+
+
+  
+</body>
+</html>

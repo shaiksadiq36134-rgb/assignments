@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>girds in css</title>
+    <style>
+        .container{
+            display: grid;
+        grid-template-columns: 200px  1fr;
+        grid-template-rows: 70px 1fr 60px 10px;
+        grid-template-areas:
+        "header header"
+        "sidebar content "
+        "extra extra"
+        "footer footer";
+        gap: 10px;
+       height: 90vh ;
+        
+        }
+        .header{
+            grid-area: header;
+            background-color: rgb(1, 16, 1);
+            padding: 15px;
+            color: rgb(244, 233, 233);
+            text-align: center;
+            grid-row: 1/3;
+           
+        }
+        .sidebar{
+
+            grid-area: sidebar;
+            background-color: aliceblue;
+            padding: 15px;
+        }
+        .content{
+            
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: auto; /* space between cards */
+            grid-area: content;
+            background-color: aliceblue;
+            padding: 0;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(59, 44, 44);
+            color: white;
+            padding: 30px;
+            text-align: center;
+
+        }
+        .extra{
+            grid-area: extra;
+            background-color: aliceblue;
+            padding: 10px;
+            grid-column: 2/3;
+            font-size: x-large;
+            color: burlywood;
+        }
+        .mama{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            font-size: xx-large;
+            padding-left: 20px;
+            
+        
+        }
+        nav a{
+            text-decoration: none;
+        
+            color:chocolate;
+        margin: 25px;
+        padding: 15px;
+        font-size: x-large;
+
+        }
+        nav a:hover{
+            color: blue;
+        }
+        p a{
+            color: black;
+
+        }
+        p a:hover{
+            color: violet;
+        }
+        .card{
+            
+            border: 1px solid red;
+            width: 250px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+        }
+        .card:hover{
+            transform: scale(20px);
+        
+        }
+        .card img{
+            animation-name: move;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes move{
+            0%{
+                opacity: o;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.3;
+            }
+        }
+         .card1 img:hover{
+            animation-name: imagezoom;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes imagezoom{
+            0%{
+                opacity: o;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.3;
+            }
+
+            }
+            card1 img:hover{
+                transition: 3s linear;
+            }
+        
+        .card1{
+            
+            border: 1px solid red;
+            width: 290px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+        }
+    
+            .card p {
+  margin: 5px 0;   
+  padding: 0;
+}
+.card3{
+            
+            border: 1px solid red;
+            width: 290px;
+            border-radius: 10px;
+             background-color: rgb(96, 63, 63);
+            justify-content: center;
+            color: white;
+        }
+                 .card3 img:hover{
+            animation-name: flip;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes flip{
+            0%{
+                opacity: o;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.3;
+            }
+        }
+a{
+    color:white;
+}
+a:hover{
+    color: red;
+}
+button:hover{
+    transform: scale(1.3);
+    color: darkmagenta;
+    background-color: lightgreen;
+    cursor: pointer;
+   
+}
+button{
+    margin: 20px;
+    padding: 20px;
+    font-size: x-large;
+    border: 1px solid red;
+    border-radius: 30px;
+}
+.book{
+    margin: 15px;
+    padding:20px;
+    font-size: larger;
+    border: 2px solid violet;
+    border-radius: 50px;
+    width: 100px;
+    cursor: pointer;
+
+}
+.book:hover{
+    transform: scale(1.4);
+    color: black;
+    background-color: lightsalmon;
+}
+        
+        
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+            <div class="mama"><img src="data:image/jpeg;base64,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" alt="img logo" width="100px">
+                                <nav>
+                 <a href="#">home</a>
+               <a href="#">online orders</a>
+               <a href="#">review</a>
+               <a href="#">help</a>
+               <a href="#">view</a>
+               </nav>
+               </div>
+            </div>
+        <div class="sidebar">
+            <h3>Quick INfo</h3>
+            <p><b>phone:</b>9709876789</p>
+            <p><b>Adress:</b>M .G Road Bangalore</p>
+            <p><b>Timings:</b>10:00AM -11:00pm</p>
+            <h3>Specials</h3>
+            <ol type="I">
+                <li><b>Today’s special :</b>chicken biryani</li>
+                <li><b>Happy hours </b>:5pm -7pm</li>
+            </ol>
+        <h4 class="book">Book your Table</h3>
+        <h3 style="color: black;">follw us on</h3>
+        <p>
+            <a href="#">facebook</a><br>
+            <a href="#">Instagram</a><br>
+            <a href="#">youtube</a><br>
+        </p>
+        </div>
+         <div class="extra">vist our beautiful restuarent of family restuarent and enjoy the most tasty food in the entire banglore and visit it in mg road bengaluru</div> 
+        <div class="content">
+       
+               <div class="card">
+                <p><b>PANEER TIKKA</b></p>
+               <img src="../media/image/paneer tikka.jpg" alt="paneer tikka">
+               <p>Paneer tikka</p>
+               <p class="price"><b>price:</b>299/-</p>
+               <p><b>review</b>“Soft, juicy paneer with a perfect smoky flavor. The spices are well balanced, not too heavy,
+                 and it tastes just like authentic tandoori. Must try for every vegetarian!”</p>
+                 <p>⭐⭐🌟⭐☆</p>
+                <p>=(4.5)</p>
+               </div>
+               <div class="card1">
+                <p><b>veg biryani</b></p>
+                <img src="../media/image/veg biryani.jpg" alt="veg biryani">
+                <p class="price"><b>price:</b>149/-</p>
+                <p><b>REVIEW:</b>"Delicious, wholesome, and bursting with flavors — a true vegetarian delight!"⭐⭐🌟☆</p>
+                <p>(3.5)</p>
+               </div>
+               
+               <div class="card3">
+                <p><b>RASMALAI</b></p>
+                <img src="../media/image/rasmail.jpg" alt="rasmalai">
+                <p class="price"><b>price:</b>69/-</p>
+                <p><b>REVIEW:</b>"Rasmalai is soft, spongy, and soaked perfectly in creamy saffron milk. 
+                    Not too sweet, just the right balance, and melts in your mouth. 
+                    A refreshing dessert after a spicy meal!" ⭐⭐⭐⭐⭐ (5/5)</p>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">contact us:<br>
+        
+        <a href="#">Instagram</a><br>
+        <a href="#">facebook</a><br>
+        <a href="#">whatsapp</a><br>
+        <a href="#">number:9876543210</a><br>
+        <button>order NOW</button>
+    </div>
+ 
+
+</body>
+</html>
