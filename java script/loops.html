@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in java Script</title>
+</head>
+<body>
+    <h2> for loop</h2>
+     <!-- by using For loop showing dates from 1 to 31 -->
+    <select name="day" id="day"></select>
+    <script>
+        let opt=" <option>select day</option> "
+    for(let q=1;q<=31;q++){
+opt+="<option value=" +q+">"+q+"</option>"} 
+    console.log("opt:",opt);
+    document.getElementById("day").innerHTML = opt;
+    </script>
+    <!-- by Using For Loop showing  months from Jaunuary to december -->
+    <select name="months" id="months"></select>
+    <script>
+         let opt1=" <option>select month</option> "
+         let months=["january","febrauary","march","april","may","june","july","august","september","october","november","decmber",];
+         for(m=0;m<=11;m++){
+         opt1+="<option value='" + months[m] + "'>" + months[m] + "</option>";
+          document.getElementById("months").innerHTML =opt1;
+        }
+         console.log("opt1:",opt1);
+
+    </script>
+    <!-- By Using For loop showing Years From 1970 to 2025 -->
+    <select name="year" id="year"></select>
+    <script>
+      let opt2=" <option>select year</option> "
+      for(y=1970;y<=2025;y++){
+
+       opt2+="<option value='" +y+ "'>" +y+ "</option>";
+       document.getElementById("year").innerHTML =opt2;
+      }
+console.log("opt2:",opt2)
+    </script><br><br><br>
+    <h1>while loop</h1>
+    <!--Showing dates By using While Loop -->
+    <select name="day1" id="day1"></select>
+    <script>
+        let opt3="<option>select the day</option>"
+        let a=1;
+        while(a<32){
+            opt3+="<option values=" +a+">"+a+"</option>";
+            a++;
+        }
+        console.log("opt3",opt3);
+        document.getElementById("day1").innerHTML =opt3;
+    </script>
+    <!-- showing months by using of while loop -->
+     <select name="month" id="month"></select>
+     <script>
+     let opt4="<option> select the Month</option>"
+      let month=["january","febrauary","march","april","may","june","july","august","september","october","november","decmber",];
+      let s=0;
+      while(s<12){
+        opt4+="<option value="+month[s]+">"+month[s]+"</option>";
+        s++;
+      }
+      console.log("opt4:",opt4);
+      document.getElementById("month").innerHTML =opt4;
+     </script>
+     <!-- showing years by using while loop -->
+      <select name="years" id="years"></select>
+      <script>
+        let opt5="<option> Select the year </option>"
+        let x=1970
+        while (x<2026) {
+            opt5+="<option values="+x+">"+x+"</option>";
+            x++;
+            
+        }
+        console.log("opt5:",opt5);
+        document.getElementById("years").innerHTML =opt5;
+      </script>
+      <h1>do while loop</h1>
+      <!-- sowing the date by using do while loop -->
+          <select name="day3" id="day3"></select>
+    <script>
+        let opt6="<option>select the day</option>"
+        let b=1;
+          do{opt6+="<option values=" +b+">"+b+"</option>"
+            b++;}
+        while(b<=31)        
+        console.log("opt6",opt6);
+        document.getElementById("day3").innerHTML =opt6;
+        </script>
+        <!-- showing the months by using do while loop -->
+         <select name="mon" id="mon"></select>
+         <script>
+            let monn="<option>select the month </option>"
+               let mo=["january","febrauary","march","april","may","june","july","august","september","october","november","decmber"]
+      let n=0;
+      do{monn+="<option value="+mo[n]+">"+mo[n]+"</option>"
+              n++;}
+        while(n<12);
+        console.log("mon",monn);
+        document.getElementById("mon").innerHTML =monn;
+         </script>
+         </script>
+     <!-- showing years by using while loop -->
+      <select name="years1" id="years1"></select>
+      <script>
+        let opt7="<option> Select the year </option>"
+        let g=1970;
+           do{ opt7+="<option values="+g+">"+g+"</option>"
+            g++; 
+        }
+        while (g<2026)
+       
+        console.log("opt7:",opt7);  
+        document.getElementById("years1").innerHTML =opt7;
+      </script>
+        </body>
+        </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in Java script</title>
+
+</head>
+<body>
+    <script>
+        // function without parameter 
+// example 1:
+        function gst(){
+            const price=1000;
+            const gst=10;
+            const tax=(price*gst/100);
+        console.log("tax:",tax);
+        console.log("total price",(price+tax));
+        }
+        gst();
+// example 2:
+
+function greet() {
+  console.log("Hello! Welcome!");
+}
+
+greet(); 
+
+//   example 3
+   function sadiq(){
+    let i=15;
+    if(i>=15){
+        console.log("He is young man ");
+    }
+    else{
+        console.log("he is old man");
+    }
+   }
+   sadiq();
+//    function with  parameter
+// example 1
+      function student(name){
+        console.log("hello" + name+ "welcome to makkah");
+      }
+      student("shaik sadiq");
+    // example2 
+             function gst1(price,gst){
+            const tax=(price*gst/100);
+            const totalPrice=price+tax;
+        console.log("tax:",tax);
+        console.log("totalPrice",totalPrice);
+        
+        }
+    gst1(2000, 10);
+    gst1(3400,16);
+
+    
+    // 3.function with the return statment
+
+    
+    
+     
+
+    </script>
+</body>
+</html>
