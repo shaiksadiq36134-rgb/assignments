@@ -56,10 +56,51 @@ greet();
 
     
     // 3.function with the return statment
+    
 
-    
-    
+    // exmple 1:
+
      
+              function gst4(price,gst){
+            const tax=(price*gst/100);
+            const totalPrice=price+tax;
+     return [totalPrice,tax];
+     
+        }
+   const result= gst4(2000, 10);
+   console.log("result:",result);
+   console.log("total price:",result[0]);
+   console.log("tax:",result[1]);
+   
+    // if there is no return statmnet then the result is undefned
+     // if we are calling two values at a time then it will return the only right most value in the code
+
+
+       // example 2:
+function checkage(age){
+    if(age>=18){
+        return "he/she is eligible for do the vote"
+    }
+    else{
+        return "he/she is not eligble to vote"
+    };
+}
+  let msg1=checkage(15);
+  console.log("msg1:",msg1);
+  let msg2=checkage(99)
+  console.log("msg2:",msg2);
+
+  // function with default parameter
+   
+          function gst5(price,gst=10){
+            const tax=(price*gst/100);
+            const totalPrice=price+tax;
+        console.log("tax:",tax);
+        console.log("totalPrice",totalPrice);
+        
+        }
+    gst5(2000);
+    gst5(3400);
 
     </script>
 </body>
