@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments on functons </title>
+</head>
+<body>
+  <!-- 1. What Is Call Back Function  -->
+   <!-- ans :A callback function means a function that is 
+    passed as an argument to another function and is called 
+    (executed) later inside that function. -->
+    <script>
+      // example 1
+      function calculate(num1,num2,num3,callback){
+        console.log("calculating....");
+        let result=num1+num2*num3;
+        callback(result);
+      }
+function displayTotal(answer){
+  console.log("The Answer Is :"+answer);
+}
+calculate(34,56,78, displayTotal);
+ calculate(5,6,8,displayTotal);
+   // exmaple 2:
+
+   function greetings(name,nextstop){
+    console.log("hello"+name);
+    nextstop();
+   }
+   function greet(){
+    console.log("happy Married life");
+   }
+   greetings("nisar",greet);
+   greetings("sadiq",greet);
+        
+      
+    </script>
+  
+</body>
+</html>
