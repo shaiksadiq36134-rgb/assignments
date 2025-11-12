@@ -33,8 +33,71 @@ calculate(34,56,78, displayTotal);
    }
    greetings("nisar",greet);
    greetings("sadiq",greet);
+   // 2.Nested function
+//  ans :A nested function is a function defined inside another function.
+//The inner function is called the nested (or inner) function, and the outer one is called the outer function
+  // A nested function is defined as the "the function which is inside the another function and the inner function wil execute only inside the 
+  // outer function "
+
+  // example 1
+function greets(name){
+  function say(){
+    console.log("hello"+name+"welcome to achivers IT");
+  }
+      say();
+}
+greets("nisar");
+
+// example 2
+
+function nisar(num1,num2,){
+  function add(){
+    return num1+num2;
+  }
+  function multiplay(){
+    return num1*num2;
+  }
+  console.log("product of: :",multiplay());
+  console.log("sum of:",add());
+  
+}
+nisar(5,7);
         
-      
+  // 3.Lexical Scope
+  // lexical scope is defined as we can access the outer function variable in inner function and we cannot access
+  // inner fuction variales in outer function because here the outer function is called in out side the loop {}
+  //Inner function can go out and see outer variables. Outer function cannot go inside and see inner variables.
+   
+  
+  // example 1
+
+  function outer() {
+  let outerVar = "I am outer";
+
+  function inner() {
+    let innerVar = "I am inner";
+    console.log(outerVar); // inner can access outerVar
+  }
+
+  // inner();
+  // console.log(innerVar); // Error: outer can't access innerVar
+}
+outer();
+  // 4.closure function
+  // defnition :A closure is a function that remembers the variables 
+  // from its outer (enclosing) function even after the outer function has finished executing.
+  function greeting(name) {
+  return function() {
+    console.log("Hello, " + name + "!");
+  }
+}
+
+const greetAman = greeting("Aman");
+const greetSadiq = greeting("Sadiq");
+
+greetAman(); 
+greetSadiq();
+
     </script>
   
 </body>
