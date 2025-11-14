@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle examle</title>
+    <style>
+            body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.4s, color 0.4s;
+      font-family: Arial, sans-serif;
+    }
+       body.on{
+            background-color: white;
+            color: black;
+
+        }
+       body.off{
+            background-color: black;
+            color: white;
+        }
+        button{
+            padding: 30px;
+            width: 20%;
+            border-radius: 60px;
+        
+        }
+    </style>
+</head>
+<body class="off">
+    
+    <button onclick="torch()">TORCH</button>
+    <script>
+        function torch(){
+            document.querySelector("body").classList.toggle("on");
+            document.querySelector("body").classList.toggle("off");
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manuplation</title>
+    <style>
+        .ab{
+            color: white;
+            background-color: pink;
+        }
+        .xy{
+             background-color: rgb(103, 95, 95);
+            padding: 23px;
+            border: 2px solid rgb(252, 10, 38);
+        }
+    </style>
+
+</head>
+<body>
+
+    <h3 class="ab">maarriage is beautiful</h3>
+    <button onclick="togglestyle()">Toggle </button>
+    <script>
+        document.querySelector("h3").classList="xy";
+            document.querySelector("h3").classList.add("ab");
+            // document.querySelector("h3").classList.remove("ab");
+      function togglestyle(){
+                document.querySelector("h3").classList.toggle("xy");
+
+      }
+
+    </script>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+        <!-- <img src="./download (3) - Copy - Copy.jpg" alt="">
+        <figcaption>Java script makes webpage dynamic and interactive</figcaption>
+    </figure> -->
+    <script>
+        const fig=document.createElement("figure");
+        console.log(fig);
+        const image=document.createElement("img");
+        console.log(image);
+        image.setAttribute("src","");
+        image.setAttribute("alt","This is my image");
+                console.log(image);
+
+    </script>
+</body>
+</html>

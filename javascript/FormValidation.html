@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook login form bby uding java script</title>
+    <style>
+        /* make the whole page centered */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  background-color: #f0f2f5;
+
+}
+        input{
+            display: block;
+            margin-bottom: 25px;
+            padding-left: 80px;
+            padding-right: 60px;
+            padding: 10px;
+            width: 100%;
+        }
+p{
+    color: red;
+    display: none;
+}
+#login{
+    color: rgb(248, 248, 251);
+    padding: 12px;
+    border: 1px solid blue;
+    background-color: rgb(20, 9, 242);
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.mia{
+ 
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+      align-items: center;
+      
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="mia">
+    <form action="" id="forms">
+    <h2 style="color: blue;">Facebook login form</h2>
+        <input type="email" name="email" id="email" placeholder="enter your email adress">
+        <p id="email_err">The email address or mobile number you entered isn't connected to an account. Find your account and log in.l</p>
+        <input type="password" name="password" id="pw" placeholder="enter your password">
+        <p id="pw_err">The password that you've entered is incorrect. 
+Forgotten password?</p>
+        <button id="login">login</button>
+    </form>
+    <script>
+        document.getElementById("login").addEventListener("click",function (event){
+            event.preventDefault();
+            
+          const emailEle=document.getElementById("email").value;
+          console.log("email:",emailEle);
+          const pwEle=document.getElementById("pw").value;
+          console.log("password:",pwEle);
+          if(emailEle==""){
+            document.getElementById("email_err").style.display="block";
+
+          }else{
+            document.getElementById("email_err").style.display="none";
+          }
+        if (pwEle==""){
+            document.getElementById("pw_err").style.display="block";
+        }else{
+            document.getElementById("pw_err").style.display="none";
+        }
+        
+        })
+
+
+    </script>
+    </div>
+    </div>
+</body>
+</html>
