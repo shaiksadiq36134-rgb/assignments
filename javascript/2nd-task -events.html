@@ -4,9 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form events with the help of java script</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;    
+    align-items: flex-start;     
+    padding-top: 30px;          
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    border: 2px solid black;
+    padding: 50px;
+}
+
+   input{
+    display: block;
+    padding: 10px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   }
+   select{
+    display: block;
+    padding: 10px;
+    margin-left:45px;
+    margin-top: 20px;
+    padding-inline: 30px;
+    
+   }
+
+   #message{
+    color: green;
+   }
+   #submit{
+
+    width: 200px;       
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: blue;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: block;      
+    margin-bottom: 30px;  
+    margin-top: 30px;
+    margin-left:45px;
+
+   }
+      #reset{
+  width: 200px;       
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: blue;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-left:45px;
+    display: block; 
+   }
+    </style>
 </head>
 <body>
-    <h2>user resgistration for </h2>
+    <div class="container">
+    <h2>user resgistration form </h2>
+    <form id="userform" class="userform">
+        <label>enter user name:</label>
+        <input type="text" name="enter user name" placeholder="enter your user name" id="username">
+        <label>Enter your email adress</label>
+        <input type="email" name="email" id="email" placeholder="enter your email adress">
+                    <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <label for="gender">Gender:</label>
+            <option value="">select the gender</option>
+            <option value="male">male</option>
+           <option value="female">female</option>
+           <option value="gay">gay</option>
+        </select>
+              <input type="submit" name="submit" id="submit" >
+          <input type="reset" name="reset" id="reset">
+    </form>
+    <p id="message"></p>
+</div>
+<script>
+const form = document.getElementById("userform");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const gender = document.getElementById("gender");
+const submit = document.getElementById("submit");
+const reset = document.getElementById("reset");
+const message = document.getElementById("message");
+
+
+
+    // FOCUS event
+    username.addEventListener("focus", () => {
+        message.textContent = "Username is typing......"
+    });
+
+    // BLUR event
+    username.addEventListener("blur", () => {
+        message.textContent = "username has been enterd"
+    });
+
+    // INPUT event (while typing)
+    email.addEventListener("input", () => {
+        message.textContent = "You are typing your email...";
+    });
+
+    // BLUR event for email
+    email.addEventListener("blur", () => {
+        message.textContent = "Email has been entered.";
+    });
+
+    // CHANGE event for dropdown
+    gender.addEventListener("change", () => {
+        message.textContent = "Gender selected: " + gender.value;
+    });
+
+    // SUBMIT event
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // stops page reload
+        message.textContent = "Form has been submitted successfuly"
+    });
+
+    // RESET event
+    form.addEventListener("reset", () => {
+        message.textContent = "Form has been reset.";
+    });
+
+</script>
+
+
+     
     
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Events Practice</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, select { padding: 8px; margin: 10px 0; }
+        #message { color: green; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+
+<h2>Form Events Practice</h2>
+
+<form id="userForm">
+
+    <label>Username:</label><br>
+    <input type="text" id="username" placeholder="Enter username"><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Enter email"><br>
+
+    <label>Gender:</label><br>
+    <select id="gender">
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br>
+
+    <button type="submit" id="submitBtn">Submit</button>
+    <button type="reset" id="resetBtn">Reset</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const gender = document.getElementById("gender");
+    const form = document.getElementById("userForm");
+    const message = document.getElementById("message");
+
+    // FOCUS event
+    username.addEventListener("focus", () => {
+        message.textContent = "Username field is focused.";
+    });
+
+    // BLUR event
+    username.addEventListener("blur", () => {
+        message.textContent = "Username has lost focus.";
+    });
+
+    // INPUT event (while typing)
+    email.addEventListener("input", () => {
+        message.textContent = "You are typing your email...";
+    });
+
+    // BLUR event for email
+    email.addEventListener("blur", () => {
+        message.textContent = "Email has been entered.";
+    });
+
+    // CHANGE event for dropdown
+    gender.addEventListener("change", () => {
+        message.textContent = "Gender selected: " + gender.value;
+    });
+
+    // SUBMIT event
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // stops page reload
+        message.textContent = "Form has been submitted successfully!";
+    });
+
+    // RESET event
+    form.addEventListener("reset", () => {
+        message.textContent = "Form has been reset.";
+    });
+</script>
+
+</body>
+</html>
