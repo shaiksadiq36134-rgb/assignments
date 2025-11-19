@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+    <!-- It is a feature where we extract required array and object element into individual variables
+     
+    two types of destructuring
+    1.array destructuring
+    2.object destructuring
+    
+    this is the ES6 concept-->
+
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <script>
+        // array destructuring
+        const arr=["sadiq","siddik","nisar","mubarak"];
+    //    console.log(arr[0]);
+    const a=arr[2];
+     const b=arr[1];
+
+    console.log(a,b)
+    const [l,m,n,o]=arr;
+    console.log(l,m,n,o);
+    console.log(o);
+
+//knowing the 50th value in the array by using destruction
+  const Myarray=Array.from({length:100},(v,i)=>i+1);
+    console.log(Myarray);
+
+  const result=Myarray.slice(49,50);
+  console.log("the 50th value is:",result)
+   
+  // object destructuring
+  const obj1={
+    id:1,
+    name:"shaikSadiq",
+  }
+  console.log(obj1)
+  const c=obj1.id;
+  const d=obj1.name;
+  console.log(c,d);
+  
+  const{id:w,name:s}=obj1;
+  console.log(w,s);
+
+    </script>
+    
+</body>
+</html>

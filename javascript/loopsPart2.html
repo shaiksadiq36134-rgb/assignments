@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+</head>
+<body>
+    <h1>For each</h1>
+    <script>
+        const arr=[1,2,3,4];
+      const result=  arr.forEach(function(n){
+            console.log(n);
+            // console.log(n*n);
+            return n*n;
+        })
+         const arr1=[1,2,3,4];
+         const result1=arr1.map(function(n){
+            console.log(n);
+            // console.log(n*n);
+            return n*n;
+        })
+        console.log(result);
+        console.log(result1);
+
+ //Feature               	forEach()	                            map()
+ 
+// Return value	       Returns nothing (undefined)	            Returns a new array
+// Purpose      	  Perform an action on each item	         Transform each item and get a new array
+// Original array	  Does not change (unless changed           Does not change
+//                                         manually)	
+// Creates new array?	❌ No	                                 ✔ Yes
+// Chaining possible?	❌ No	                              ✔ Yes (because it returns array)
+// Use case	            Logging, updating UI, side-effects	        Converting values, creating a new list
+// Performance	         Slightly faster (no new array)	            Slightly slower (creates new array)
+// Common example	    arr.forEach(x => console.log(x))	         arr.map(x => x * 2)
+// Good for                  	Doing	                                Producing
+
+    </script>
+    
+</body>
+</html>
