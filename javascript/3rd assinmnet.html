@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular expression</title>
+    <style>
+    
+            body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  background-color: #f0f2f5;
+
+}
+
+        
+        input{
+            display: block;
+            margin-top: 10px;
+            margin-left: 70px;
+            margin-right: 40px;
+            padding: 10px;
+            width:70%;
+
+        }
+        label{
+
+            margin-top: 20px;
+        }
+    
+                .container {
+        width: 350px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+    }
+    #submit{
+        width: 80%;
+        background-color: blue;
+        color: white;
+        border-radius: 40px;
+        
+    }
+    #reset{
+            width: 80%;
+        background-color: blue;
+        color: white;
+        border-radius: 40px;
+    }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-left: 30px;">Regular Expression </h1>
+        <label for="email">Enter Your email adress</label>
+        <input type="email" name="email" id="email" placeholder="you@example.com">
+       <p id="emialerr" style="display: none; color: red;">please enter valid email id</p>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" placeholder="enter your password">
+        <p id="passError" style="display: none; color: red;">"the password must conatin 8+ charecter with capital small number and special charecter"</p>
+        <label for="pan">enter your Pan number</label>
+      <input type="text" name="pan number" placeholder="enter your pan number" id="pan">
+      <p id="panError" style="display: none; color: red;">Please enter valid pan number</p>
+      <input type="submit" name="submit" id="submit">
+      <input type="reset" name="reset" id="reset">
+    </div>
+
+<script>
+
+        const email=document.getElementById("email");
+        const password=document.getElementById("password");
+        const pan=document.getElementById("pan");
+        const reset = document.getElementById("reset");
+      const erremail=document.getElementById("emialerr");
+      const passError=document.getElementById("passError");
+      const panError=document.getElementById("panError");
+
+       // regular expression
+       const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+const passRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+    
+    // email
+    email.addEventListener("blur",function(){
+    if(!emailRegex.test(email.value)){
+        erremail.style.display="block";
+
+    }
+    else{
+        erremail.style.display="none";
+    }
+     });
+
+     //password\
+     password.addEventListener("blur", function(e){
+    e.preventDefault();
+
+    if (!passRegex.test(password.value)) {
+        passError.style.display = "block";
+    } else {
+        passError.style.display = "none";
+    }
+});
+//   pan number
+pan.addEventListener("blur", function() {
+    if (!panRegex.test(pan.value)) {
+        panError.style.display = "block";
+    } else {
+        panError.style.display = "none";
+    }
+
+});
+reset.addEventListener("input",function(){
+    alert("your form has been reseted")
+});
+    // submit
+    document.getElementById("submit").addEventListener("click",function(e){
+        e.preventDefault();
+        let valid=true;
+        if(!emailRegex.test(email.value)){
+            erremail.style.display="block";
+            valid=false;
+
+        }
+            if (!passRegex.test(password.value)) {
+        passError.style.display = "block"};
+        valid=false;
+
+        if (!panRegex.test(pan.value)){
+            panError.style.display="block";
+            valid=false;
+        }
+        if(valid){
+            alert("form submitted successfully");
+        }
+        
+        // reset
+           form.addEventListener("reset", () => {
+        emailError.style.display = "none";
+        passError.style.display = "none";
+        panError.style.display = "none";
+    });
+
+    });
+     
+
+     
+</script>
+    
+</body>
+</html>

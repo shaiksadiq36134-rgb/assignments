@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubling and event cpaturing</title>
+    <style>
+        #section1 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        #section2 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        #section3 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        #s1 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        #s2 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        #s3 {
+            border: 1px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EventBubling</h1>
+    <section id="section1">
+        <p>section 1</p>
+        <section id="section2">
+            <p>section 2</p>
+            <section id="section3">
+                <p>section 3</p>
+            </section>
+
+        </section>
+    </section>
+    <h1>Event bubling :</h1>
+    <p> Event bubbling is a JavaScript mechanism where
+        an event starts from the innermost (child) element and then moves upward to its parent elements one by one.</p>
+    <p>in simple words event bubling me jab button press karti jab first grand child element trigger hote baad child
+        element uske baad
+        parent trigger hote isse event bubbling kati</p>
+    <p>isse tikana kato stop propagation kane ka method use karna</p>
+    <h1>event capturing</h1>
+    <section id="s1">
+        <p>section 1</p>
+        <section id="s2">
+            <p>section 2</p>
+            <section id="s3">
+                <p>section 3</p>
+            </section>
+
+        </section>
+    </section>
+
+
+    <script>
+        // event bubbling method js
+        const secEle1 = document.getElementById("section1");
+        const secELe2 = document.getElementById("section2");
+        const secELe3 = document.getElementById("section3");
+
+
+        secEle1.addEventListener("click", function () {
+            alert("section 1 triggered");
+        })
+        secELe2.addEventListener("click", function (e) {
+            alert("section 2 is triggered");
+            //    e.stopPropagation();
+        })
+        secELe3.addEventListener("click", function (e) {
+            alert("section 3 is triggered");
+            //    e.stopPropagation();
+        })
+
+        // event capturing
+        const s1 = document.getElementById("s1");
+        const s2 = document.getElementById("s2");
+        const s3 = document.getElementById("s3");
+
+
+        s1.addEventListener("click", function () {
+            alert("section 1 triggered");
+        }, true)
+        s2.addEventListener("click", function () {
+            alert("section 2 is triggered");    
+        }, false)
+        s3.addEventListener("click", function () {
+            alert("section 3 is triggered")
+        }, true)
+
+    </script>
+</body>
+
+</html>
