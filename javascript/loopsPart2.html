@@ -8,34 +8,72 @@
 <body>
     <h1>For each</h1>
     <script>
-        const arr=[1,2,3,4];
-      const result=  arr.forEach(function(n){
-            console.log(n);
-            // console.log(n*n);
-            return n*n;
-        })
-         const arr1=[1,2,3,4];
-         const result1=arr1.map(function(n){
-            console.log(n);
-            // console.log(n*n);
-            return n*n;
-        })
-        console.log(result);
-        console.log(result1);
+     const number=[1,2,3,4,5];
+    const result1= number.forEach((num) => {
+        console.log(num*num);
 
- //Feature               	forEach()	                            map()
- 
-// Return value	       Returns nothing (undefined)	            Returns a new array
-// Purpose      	  Perform an action on each item	         Transform each item and get a new array
-// Original array	  Does not change (unless changed           Does not change
-//                                         manually)	
-// Creates new array?	❌ No	                                 ✔ Yes
-// Chaining possible?	❌ No	                              ✔ Yes (because it returns array)
-// Use case	            Logging, updating UI, side-effects	        Converting values, creating a new list
-// Performance	         Slightly faster (no new array)	            Slightly slower (creates new array)
-// Common example	    arr.forEach(x => console.log(x))	         arr.map(x => x * 2)
-// Good for                  	Doing	                                Producing
+     });
+     const arr=[10,20,30,40];
+     arr.forEach(function(r){
+    //   return r * 2;
+      console.log(r);
 
+     })
+
+     // for each method collects the array elements and prints one by one .
+     // in foreach method the return method doesn't work 
+
+     const arr1=["sadiq","mubarak","nisar"];
+  const result=   arr1.map((e)=>{
+        console.log(e);
+        
+        return e;
+        
+     })
+     console.log(result1);
+     console.log(result);
+
+     
+     const arr2=[1,2,3,4,5,6,7,8,9,10];
+     const even=arr2.filter((ele)=>{
+        return ele%2!==0;
+     })
+     console.log(even);
+
+
+
+     // Project Level implimentation of filter
+
+     const products=[
+        {name:"laptop",price:"50000"},
+         {name:"watch",price:"3000"},
+        {name:"i phone",price:"80000"},
+        {name:"mac",price:"70000"},
+        {name:"tv",price:"1000"},
+    ];
+        const productsitems=products.filter(p=>p.price>5000);
+      const results=  console.log(productsitems);
+
+
+     // 2nd example
+
+     const items=["apple","banana","pineapple","grapes"];
+     const searchtext="ap";
+
+     const temba=items.filter(m=>m.toLowerCase().includes(searchtext.toLowerCase()));
+
+     console.log(temba);
+
+     // reduce method
+        
+// debugger
+     const arr3=[1,2,3,4,5,6,7,8,9];
+    const resE=arr3.reduce((ac,n)=>{
+        return  ac+n;
+
+    },0)
+    console.log(resE);
+  
     </script>
     
 </body>
