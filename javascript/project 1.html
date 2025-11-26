@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The keyword mini project</title>
+    <style>
+.card {
+    background: white;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+}
+
+.delbtn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.delbtn:hover {
+    background: #cc0000;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>The employe card of managment using keyword </h1>
+    <input type="text" placeholder="enter employee name" id="empname">
+    <button id="addbtn">Add employee</button>
+    <h3>employe details</h3>
+    <div id="list"></div>
+    <script>
+        //1.Constructor function (this = new object)
+        function employee(name) {
+            console.log(this);
+            this.name = name;
+        }
+        const list = document.getElementById("list");
+        const empname = document.getElementById("empname");
+        const addbtn = document.getElementById("addbtn");
+
+        addbtn.addEventListener("click", function () {
+            const name=empname.value.trim();
+            if(!name)return;
+            const emp = new employee(name);
+            console.log(emp);
+            // 2.object with method (this=method);
+            const cardobj={
+                emp,
+                show(){
+                    alert("clicked"+this.emp.name);
+                }
+            };
+
+            // DOM Creation
+
+            const div=document.createElement("div");
+            div.className="card";
+            div.textContent=emp.name;
+
+            div.addEventListener("click",cardobj.show.bind(cardobj));
+            // delete button
+            const delBtn=document.createElement("button");
+            delBtn.textContent="delete";
+            delBtn.className="delbtn";
+
+            delBtn.addEventListener("click",function(e){
+                e.stopPropagation();
+                console.log("delete clicked on:",this.parentNode.textContent);
+                this.parentNode.remove();
+
+            });
+            
+            div.appendChild(delBtn);
+            list.appendChild(div);
+            empname.value="";
+             });
+
+            const arrowex={
+                name:"arrow test",
+                show:()=>{
+                    console.log("arrow this:",this);
+                }
+            };
+            arrowex.show();
+
+
+    </script>
+</body>
+
+</html>

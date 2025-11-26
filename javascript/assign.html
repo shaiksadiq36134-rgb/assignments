@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+
+<body>
+    <h1>merge two sorted array</h1>
+    <script>
+        //merge two sorted arrays
+        arr1 = [1, 4, 5];
+        arr2 = [2, 3, 6];
+        const result = [...arr1, ...arr2].sort((a, b) => a - b);
+        console.log(result);
+
+        //Find longest word in a sentence
+        function longword(sentence){
+            const words=sentence.split(" ");
+             
+            let long="";
+
+            for(let word of words) {
+                if(word.length > long.length){
+                    long=word;
+                }
+            }
+            return long;
+
+        }
+        console.log(longword("iam learning java script programing"));
+
+
+    </script>
+</body>
+
+</html>
